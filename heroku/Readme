@@ -1,0 +1,14 @@
+Run the Heroku CLI in a container.
+
+Instructions
+
+1. Copy bin/heroku into your $PATH somewhere.
+2. Put your Heroku API key in $HOME/lib/heroku-key.
+(Find your API key at https://dashboard.heroku.com/account.)
+3. Run "heroku apps"!
+
+This gives the command minimal access to your system,
+so it can't do helpful things like add git remotes,
+or infer app names. It also has no memory between
+invocations, so even "heroku login" doesn't work.
+(That's why you have to save your API key by hand.)

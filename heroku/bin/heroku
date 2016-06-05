@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -eo pipefail
+
+k=`cat $HOME/lib/heroku-key`
+
+exec docker run -ti --rm\
+	-e HEROKU_API_KEY="$k"\
+	krarick/heroku\
+	heroku "$@"
